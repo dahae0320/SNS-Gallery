@@ -25,11 +25,11 @@
 - Model에 작성할 class를 말한다.
 1. 사용자 테이블(Account)은 django에서 제공해주는 UserFormCreation()을 이용하여 간단하게 구현할 것이다.
 
-    ![account](https://user-images.githubusercontent.com/50159740/126261544-d9d60956-ffab-4b3a-9ca7-7e63944df161.png)
+	![Account](https://user-images.githubusercontent.com/50159740/126265603-e4041c88-dc0a-437e-a56e-c5af16ded818.png)
 
 2. 게시물 테이블(Post)
 
-    ![post](https://user-images.githubusercontent.com/50159740/126261543-6e94ae9a-9e79-4a11-9059-dd6de26c5401.png)
+	![Post](https://user-images.githubusercontent.com/50159740/126265600-a0e8937b-87e2-41ab-9718-ebf7614f0501.png)
 
 - 두 테이블 간의 관계 ( 1 : n )
 
@@ -37,7 +37,7 @@
 
     → 하나의 게시물은 한명의 사용자의 것이다.
 
-    ![relation](https://user-images.githubusercontent.com/50159740/126261541-466919b3-c1d4-410e-a3a1-5f4d2c82c171.png)
+    ![Relation](https://user-images.githubusercontent.com/50159740/126265597-aa09a4b4-48b3-4360-b8e9-2d2c0cb14dec.png)
 
 # 4. 화면 설계(prototype)
 
