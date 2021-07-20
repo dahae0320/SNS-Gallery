@@ -21,14 +21,15 @@
 
 # 3. 데이터 테이블
 
+
 - Model에 작성할 class를 말한다.
 1. 사용자 테이블(Account)은 django에서 제공해주는 UserFormCreation()을 이용하여 간단하게 구현할 것이다.
 
-    ![Account](https://user-images.githubusercontent.com/50159740/126260830-28790dfc-ccbd-4729-a785-c8f9eaeb0f1e.png)
+    ![account](https://user-images.githubusercontent.com/50159740/126261544-d9d60956-ffab-4b3a-9ca7-7e63944df161.png)
 
 2. 게시물 테이블(Post)
 
-    ![Post](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7b042327-c176-4aa9-bf20-eedf42646bb5/Untitled.png)
+    ![post](https://user-images.githubusercontent.com/50159740/126261543-6e94ae9a-9e79-4a11-9059-dd6de26c5401.png)
 
 - 두 테이블 간의 관계 ( 1 : n )
 
@@ -36,13 +37,13 @@
 
     → 하나의 게시물은 한명의 사용자의 것이다.
 
-    ![Relation](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2963236c-612b-49e8-a743-e633d9168ad3/Untitled.png)
+    ![relation](https://user-images.githubusercontent.com/50159740/126261541-466919b3-c1d4-410e-a3a1-5f4d2c82c171.png)
 
 # 4. 화면 설계(prototype)
 
 ### (1) index.html (메인화면, 모든 게시물 확인)
 
-![index.html](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/67f01747-a9e6-4cb1-8792-7b4d7d75556a/Untitled.png)
+![index](https://user-images.githubusercontent.com/50159740/126261538-f439b089-c80a-4c7d-9fda-8b86ef3b869d.png)
 
 ```html
 <body>
@@ -57,7 +58,7 @@
 
 ### (2) post.html (게시물 작성 화면)
 
-![post.html](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b3b9c738-a073-42d1-adf9-e88f8469b769/Untitled.png)
+![postHtml](https://user-images.githubusercontent.com/50159740/126261537-59f698bc-574b-4e0a-bb49-ed08069b6f25.png)
 
 ```html
 <body>
@@ -71,7 +72,7 @@
 
 ### (3) post_update.html (게시물 수정 화면)
 
-![post_update.html](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c7b0b60b-8b92-4fc0-9a38-5e556e216556/Untitled.png)
+![post_update](https://user-images.githubusercontent.com/50159740/126261534-dfb6b485-32af-40f6-9aa0-252f2fbf9783.png)
 
 ```html
 <body>
@@ -85,7 +86,7 @@
 
 ### (4) signup.html (회원가입 화면)
 
-![signup.html](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6168b349-e43b-4e14-b297-f03ec43b5e4e/Untitled.png)
+![signup](https://user-images.githubusercontent.com/50159740/126261530-7fa47ee4-31b6-459e-bea5-40fd08dd6635.png)
 
 ```html
 <body>
