@@ -134,7 +134,7 @@
     def post(request):
         return render(request, 'post.html')
 
-    def post_update(request, post_id):
+    def post_update(request):
         return render(request, 'post_update.html')
     ```
 
@@ -193,25 +193,6 @@
 
 - config 폴더에 templates 폴더 생성
 - 해당 폴더에 base.html 생성
-- base.html을 settings.py에 연결하기
-
-    ```python
-    TEMPLATES = [
-        {
-            'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': ['config/templates'],
-            'APP_DIRS': True,
-            'OPTIONS': {
-                'context_processors': [
-                    'django.template.context_processors.debug',
-                    'django.template.context_processors.request',
-                    'django.contrib.auth.context_processors.auth',
-                    'django.contrib.messages.context_processors.messages',
-                ],
-            },
-        },
-    ]
-    ```
 
 - base.html을 settings.py에 연결하기
 
