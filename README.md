@@ -703,14 +703,37 @@ def post_delete(request, post_id):
     path('post_update/<int:post_id>', views.post_update, name='post_update'),
     path('post_delete/<int:post_id>', views.post_delete, name='post_delete'),
     ```
-
 [post > templates]
 
-- ㅇㄹ
+- 클릭 이벤트
 
 ```python
 <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" location.href=`{% url 'post_delete' post.id %}` ">Delete</button>
 <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" location.href=`{% url 'post_update' post.id %}` ">Edit</button>
+```
+
+- post_update.html
+
+```python
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h3 class="fw-light">[ Post Update ]</h3>
+        <form action="{% url 'post_update' edit.id %}" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            <p>사진 업로드 : <input type="file" name="image"> </p>
+            <p>설명 : <input type="text" name="description" value="{{ edit.description }}"> </p>
+            <input type="submit" value="올리기">
+        </form>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
 ```
 - 전부 다 작성한 views.py
 
