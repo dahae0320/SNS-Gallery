@@ -24,11 +24,11 @@
 - Model에 작성할 class를 말한다.
 1. 사용자 테이블(Account)은 django에서 제공해주는 UserFormCreation()을 이용하여 간단하게 구현할 것이다.
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/54ba5435-64d2-4298-9b29-620ec69cafdb/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/54ba5435-64d2-4298-9b29-620ec69cafdb/Untitled.png)
+    ![Account](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/54ba5435-64d2-4298-9b29-620ec69cafdb/Untitled.png)
 
 2. 게시물 테이블(Post)
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7b042327-c176-4aa9-bf20-eedf42646bb5/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7b042327-c176-4aa9-bf20-eedf42646bb5/Untitled.png)
+    ![Post](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7b042327-c176-4aa9-bf20-eedf42646bb5/Untitled.png)
 
 - 두 테이블 간의 관계 ( 1 : n )
 
@@ -36,13 +36,13 @@
 
     → 하나의 게시물은 한명의 사용자의 것이다.
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2963236c-612b-49e8-a743-e633d9168ad3/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2963236c-612b-49e8-a743-e633d9168ad3/Untitled.png)
+    ![Relation](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2963236c-612b-49e8-a743-e633d9168ad3/Untitled.png)
 
 # 4. 화면 설계(prototype)
 
 ### (1) index.html (메인화면, 모든 게시물 확인)
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/67f01747-a9e6-4cb1-8792-7b4d7d75556a/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/67f01747-a9e6-4cb1-8792-7b4d7d75556a/Untitled.png)
+![index.html](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/67f01747-a9e6-4cb1-8792-7b4d7d75556a/Untitled.png)
 
 ```html
 <body>
@@ -57,7 +57,8 @@
 
 ### (2) post.html (게시물 작성 화면)
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b3b9c738-a073-42d1-adf9-e88f8469b769/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b3b9c738-a073-42d1-adf9-e88f8469b769/Untitled.png)
+![post.html](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b3b9c738-a073-42d1-adf9-e88f8469b769/Untitled.png)
+![account](https://user-images.githubusercontent.com/50159740/126260830-28790dfc-ccbd-4729-a785-c8f9eaeb0f1e.png)
 
 ```html
 <body>
@@ -71,7 +72,7 @@
 
 ### (3) post_update.html (게시물 수정 화면)
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c7b0b60b-8b92-4fc0-9a38-5e556e216556/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c7b0b60b-8b92-4fc0-9a38-5e556e216556/Untitled.png)
+![post_update.html](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c7b0b60b-8b92-4fc0-9a38-5e556e216556/Untitled.png)
 
 ```html
 <body>
@@ -85,7 +86,7 @@
 
 ### (4) signup.html (회원가입 화면)
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6168b349-e43b-4e14-b297-f03ec43b5e4e/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6168b349-e43b-4e14-b297-f03ec43b5e4e/Untitled.png)
+![signup.html](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6168b349-e43b-4e14-b297-f03ec43b5e4e/Untitled.png)
 
 ```html
 <body>
