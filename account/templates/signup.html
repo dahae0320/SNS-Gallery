@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+      <a href="{% url 'index' %}">돌아가기</a>
+        <form action="" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="제출">
+        </form>
+      </div>
+    </div>
+  </section>
+{% endblock %}

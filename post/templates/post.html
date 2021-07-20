@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h3 class="fw-light">[ Posting ]</h3>
+        <form action="{% url 'post' %}" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            <p>사진 업로드 : <input type="file" name="image"> </p>
+            <p>설명 : <input type="text" name="description"> </p>
+            <input type="submit" value="올리기">
+        </form>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

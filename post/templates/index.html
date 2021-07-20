@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+ <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Portfoilo</h1>
+        <!-- 이미지 추가하기 -->
+        <img src="#" alt="profile" height="200px">
+        <br><br>
+        <p class="lead text-muted">글을 쓰고 사람들과 소통하세요.</p>
+        {% if user.is_authenticated %}
+        <p>
+          <a href="{% url 'post' %}" class="btn btn-primary my-2">POST</a>
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for post in posts.all %}
+        <div class="col">
+          <div class="card shadow-sm">
+            <!-- 이미지 자리 -->
+            <img src="{{ post.image.url }}" width="100%" alt="{{ post.id }}">
+            <div class="card-body">
+              <p class="card-text">{{ post.description }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                {% if request.user == post.author %}
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" location.href=`{% url 'post_delete' post.id %}` ">Delete</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick=" location.href=`{% url 'post_update' post.id %}` ">Edit</button>
+                </div>
+                {% endif %}
+                <small class="text-muted">{{ post.author.username }}</small>
+                <small class="text-muted">{{ post.pub_date }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
