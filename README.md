@@ -1,4 +1,4 @@
-# SNS-Gallery
+# 1. SNS-Gallery 🖼
 
 ## 📌 프로젝트 명 : Gallery
 
