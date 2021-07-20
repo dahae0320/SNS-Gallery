@@ -24,7 +24,7 @@
 - Model에 작성할 class를 말한다.
 1. 사용자 테이블(Account)은 django에서 제공해주는 UserFormCreation()을 이용하여 간단하게 구현할 것이다.
 
-    ![Account](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/54ba5435-64d2-4298-9b29-620ec69cafdb/Untitled.png)
+    ![Account](https://user-images.githubusercontent.com/50159740/126260830-28790dfc-ccbd-4729-a785-c8f9eaeb0f1e.png)
 
 2. 게시물 테이블(Post)
 
@@ -58,7 +58,6 @@
 ### (2) post.html (게시물 작성 화면)
 
 ![post.html](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b3b9c738-a073-42d1-adf9-e88f8469b769/Untitled.png)
-![account](https://user-images.githubusercontent.com/50159740/126260830-28790dfc-ccbd-4729-a785-c8f9eaeb0f1e.png)
 
 ```html
 <body>
