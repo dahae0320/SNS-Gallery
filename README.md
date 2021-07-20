@@ -214,7 +214,33 @@
     ```
 
 - **post**
+
+    ```python
+    from django.shortcuts import render
+
+    # Create your views here.
+    def index(request):
+        return render(request, 'index.html')
+
+    def post(request):
+        return render(request, 'post.html')
+
+    def post_update(request, post_id):
+        return render(request, 'post_update.html')
+    ```
+
 - **account**
+
+    ```python
+    from django.shortcuts import render
+
+    # Create your views here.
+    def login_view(request):
+        return render(request, 'login.html')
+
+    def signup_view(request):
+        return render(request, 'signup.html')
+    ```
 
 ## 2️⃣ 백엔드
 
