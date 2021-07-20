@@ -213,34 +213,170 @@
     ]
     ```
 
-- **post**
+- base.html을 settings.py에 연결하기
 
     ```python
-    from django.shortcuts import render
-
-    # Create your views here.
-    def index(request):
-        return render(request, 'index.html')
-
-    def post(request):
-        return render(request, 'post.html')
-
-    def post_update(request, post_id):
-        return render(request, 'post_update.html')
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': ['config/templates'],
+            'APP_DIRS': True,
+            'OPTIONS': {
+                'context_processors': [
+                    'django.template.context_processors.debug',
+                    'django.template.context_processors.request',
+                    'django.contrib.auth.context_processors.auth',
+                    'django.contrib.messages.context_processors.messages',
+                ],
+            },
+        },
+    ]
     ```
+
+- **post**
+    - index.html
+
+        ```html
+        {% extends 'base.html' %}
+
+        {% block content %}
+        {% load static %}
+         <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Portfoilo</h1>
+                <!-- 이미지 추가하기 -->
+                <img src="#" alt="profile" height="200px">
+                <br><br>
+                <p class="lead text-muted">글을 쓰고 사람들과 소통하세요.</p>
+                <p>
+                  <a href="#" class="btn btn-primary my-2">POST</a>
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <div class="album py-5 bg-light">
+            <div class="container">
+
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <!-- 이미지 자리 -->
+                    <img src="" width="100%" alt="">
+                    <div class="card-body">
+                      <p class="card-text">설명</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="">Delete</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="">Edit</button>
+                        </div>
+                        <small class="text-muted">작성자</small>
+                        <small class="text-muted">작성한 날짜</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        {% endblock %}
+        ```
+
+    - post.html
+
+        ```html
+        {% extends 'base.html' %}
+
+        {% block content %}
+
+          <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <h3 class="fw-light">[ Posting ]</h3>
+                <form action="#" enctype="multipart/form-data" method="POST">
+                    {% csrf_token %}
+                    <p>사진 업로드 : <input type="file" name="image"> </p>
+                    <p>설명 : <input type="text" name="description"> </p>
+                    <input type="submit" value="올리기">
+                </form>
+              </div>
+            </div>
+          </section>
+
+        {% endblock %}
+        ```
+
+    - post_update.html
+
+        ```html
+        {% extends 'base.html' %}
+
+        {% block content %}
+
+          <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <h3 class="fw-light">[ Post Update ]</h3>
+                <form action="#" enctype="multipart/form-data" method="POST">
+                    {% csrf_token %}
+                    <p>사진 업로드 : <input type="file" name="image"> </p>
+                    <p>설명 : <input type="text" name="description" value=""> </p>
+                    <input type="submit" value="올리기">
+                </form>
+              </div>
+            </div>
+          </section>
+
+        {% endblock %}
+        ```
 
 - **account**
+    - login.html
 
-    ```python
-    from django.shortcuts import render
+        ```html
+        {% extends 'base.html' %}
 
-    # Create your views here.
-    def login_view(request):
-        return render(request, 'login.html')
+        {% block content %}
+          <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+              <a href="{% url 'index' %}">돌아가기</a>
+                <form action="" method="POST">
+                  {% csrf_token %}
+                  <!-- {{ form.as_p }} -->
+                  <input type="submit" value="제출">
+                </form>
+              </div>
+            </div>
+          </section>
+        {% endblock %}
+        ```
 
-    def signup_view(request):
-        return render(request, 'signup.html')
-    ```
+    - signup.html
+
+        ```html
+        {% extends 'base.html' %}
+
+        {% block content %}
+          <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+              <a href="{% url 'index' %}">돌아가기</a>
+                <form action="" method="POST">
+                  {% csrf_token %}
+                  <!-- {{ form.as_p }} -->
+                  <input type="submit" value="제출">
+                </form>
+              </div>
+            </div>
+          </section>
+        {% endblock %}
+        ```
 
 ## 2️⃣ 백엔드
 
